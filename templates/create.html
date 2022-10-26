@@ -3,5 +3,10 @@
 {% block page_header %} Create Page {% endblock page_header %}
 
 {% block content %}
-
+<div class="container pt-4">
+    <form action="" method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="作成" class="btn btn-primary">
+    </form>
+</div>
 {% endblock content %}

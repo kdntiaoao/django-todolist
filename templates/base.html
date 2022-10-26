@@ -17,8 +17,11 @@
   </head>
   <body>
     <header class="border-bottom">
-      <div class="container">
-        <h1 class="fs-3 my-3">TODO LIST</h1>
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="fs-3 my-3"><a href="/list" class="text-reset text-decoration-none">TODO LIST</a></h1>
+        <a class="btn btn-outline-primary" href="/create" aria-label="TODOタスクを作成する">
+          作成
+        </a>
       </div>
     </header>
     {% block content %} {% endblock content %}
