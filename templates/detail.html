@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container pt-4">
-  <a href="/list">一覧へ</a>
+  <a href="{% url 'list' %}">一覧へ</a>
   <h2>ID: {{ object.id }}</h2>
   <dl>
     <div>
