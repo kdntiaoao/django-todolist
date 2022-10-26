@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Page</title>
+  </head>
+  <body>
+    {% for item in object_list %}
+    <a href="/detail/{{ item.id }}">
+      <dl>
+        <dt>title:</dt>
+        <dd>{{ item.title }}</dd>
+        <dt>memo:</dt>
+        <dd>{{ item.memo }}</dd>
+      </dl>
+    </a>
+    {% endfor %}
+  </body>
+</html>
