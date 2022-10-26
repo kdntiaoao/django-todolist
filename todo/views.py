@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 from todo.models import TodoModel
 
@@ -12,4 +12,8 @@ class TodoList(ListView):
 
 class TodoDetail(DetailView):
     template_name: str = 'detail.html'
+    model = TodoModel
+
+class TodoCreate(CreateView):
+    template_name: str = 'create.html'
     model = TodoModel

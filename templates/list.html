@@ -7,7 +7,7 @@
     <ul class="list-group list-group-flush">
         {% for item in object_list %}
         <li class="d-flex align-items-center list-group-item">
-            <p class="flex-fill m-0">
+            <div class="flex-fill d-flex align-items-center gap-2">
                 <span class="badge bg-{{ item.priority }}">
                     {% if item.priority == 'danger' %}
                         高
@@ -17,8 +17,11 @@
                         低
                     {% endif %}
                 </span>
-                {{ item.title }}
-            </p>
+                <div class="flex-fill">
+                    <p class="text-muted m-0">期限：{{ item.deadline|date:"Y/n/j" }}</p>
+                    <p class="m-0 fs-5">{{ item.title }}</p>
+                </div>
+            </div>
             <ul class="d-flex gap-2 list-unstyled">
                 <li>
                     <a class="btn btn-primary btn-sm" href="/detail/{{ item.id }}">
